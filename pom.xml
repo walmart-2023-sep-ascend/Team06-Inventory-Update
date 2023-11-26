@@ -76,7 +76,6 @@
 
 	<reporting>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
@@ -97,7 +96,7 @@
 				<version>3.8.2</version>
 			</plugin>
 		</plugins>
-		<finalName>inventory-update-docker</finalName>
+		<finalName>inventory-update-service</finalName>
 	</build>
 
 </project>

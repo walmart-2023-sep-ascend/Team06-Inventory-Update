@@ -4,28 +4,39 @@ package com.capstone.InventoryUpdate.model;
 public class Products {
 	int productId;
 	int availableQty;
+	String productName;
+	int productRetailPrice;
 	public Products() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	//public Products(Product products) {
-		// TODO Auto-generated constructor stub
-//	}
 	public int getProductId() {
 		return productId;
 	}
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-	public int getavailableQty() {
+	public int getAvailableQty() {
 		return availableQty;
 	}
-	public void setavailableQty(int quantity) {
-		this.availableQty= quantity;
+	public void setAvailableQty(int availableQty) {
+		this.availableQty = availableQty;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public int getProductRetailPrice() {
+		return productRetailPrice;
+	}
+	public void setProductRetailPrice(int productRetailPrice) {
+		this.productRetailPrice = productRetailPrice;
 	}
 	@Override
 	public String toString() {
-		return "Products [productId=" + productId + ", quantity=" + availableQty + "]";
-	}
-	
+		return "Products [productId=" + productId + ", availableQty=" + availableQty + ", productName=" + productName
+				+ ", productRetailPrice=" + productRetailPrice + "]";
+	}	
 }

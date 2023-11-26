@@ -1,4 +1,4 @@
 FROM openjdk:17
 EXPOSE 6003
-ADD target/inventory-update-docker.jar inventory-update-docker.jar
-ENTRYPOINT ["java","-jar","inventory-update-docker.jar"]
+ADD target/inventory-update-service.jar inventory-update-service.jar
+ENTRYPOINT ["java","-jar","inventory-update-service.jar"]
