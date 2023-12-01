@@ -17,7 +17,7 @@ pipeline{
         stage('Build Docker image'){
             steps{
                 script{
-                    bat 'docker build -t inventory-update-service.jar .'
+                    bat 'docker build -t inventory-update-service .'
                 }
             }
         }
