@@ -3,15 +3,30 @@ pipeline{
     tools{
         maven 'MAVEN_HOME'
     }
-    stages{
+    stages{        
+        stage('Cleanup Workspace') {
+            steps {
+                deleteDir()
+            }
+        }
         stage('Clone code from Git'){
             steps{
             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/walmart-2023-sep-ascend/Team06-Inventory-Update.git']])
             }
         }
-        stage('Maven package'){
+        stage('Build Application'){
             steps{
             bat 'mvn clean install'
+            }
+        }
+        stage('Test Application'){
+            steps{
+            bat 'mvn test'
+            }
+        }
+        stage('Code Analysis'){
+            steps{
+            bat 'mvn pmd:pmd'
             }
         }
         stage('Build Docker image'){
