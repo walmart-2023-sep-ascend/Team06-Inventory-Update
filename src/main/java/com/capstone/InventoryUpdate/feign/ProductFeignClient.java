@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.capstone.InventoryUpdate.model.Products;
 
-@FeignClient(name = "product-service", url = "http://localhost:8902",fallback = ProductFeignClientFallback.class)
+@FeignClient(name = "product-service", url = "http://product-service-container:8902",fallback = ProductFeignClientFallback.class)
 public interface ProductFeignClient {
 
 	@GetMapping("/product/{productId}")
