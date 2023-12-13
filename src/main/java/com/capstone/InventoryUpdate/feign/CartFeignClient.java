@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.capstone.InventoryUpdate.model.Cart;
 
-@FeignClient(name = "cart-service", url = "http://172.172.241.64:8901", fallback = CartFeignClientFallback.class)
+@FeignClient(name = "cart-service", url = "${capstone.cartservice.url}", fallback = CartFeignClientFallback.class)
 public interface CartFeignClient {
 	
 	@GetMapping("/cart/{cartId}")
